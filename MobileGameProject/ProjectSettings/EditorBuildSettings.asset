@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MobileGameTemplate.unity
-    guid: 05c27ce206f63264298b2250fd8eacd8
+    path: Assets/Scenes/MainMenu.unity
+    guid: 05523ec814016604491dda43fb61b2b5
+  - enabled: 1
+    path: Assets/Scenes/PracticeTap.unity
+    guid: d874fac1621af1f4f8a3bdebf30e1086
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
