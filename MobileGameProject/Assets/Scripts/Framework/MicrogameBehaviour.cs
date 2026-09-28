@@ -1,32 +1,35 @@
 using UnityEngine;
 
-public abstract class MicrogameBehaviour
+namespace MicrogameCourse.Framework
 {
-    //Microgame Session
-    protected bool IsRunning { get; private set; }
-    protected MicrogameSession Session {get; private set; }
-
-    public virtual void Begin(MicrogameSession session)
+    public abstract class MicrogameBehaviour : MonoBehaviour
     {
-        Session = session;
-        IsRunning = true; 
+        //Microgame Session
+        protected bool IsRunning { get; private set; }
+        protected MicrogameSession Session { get; private set; }
+
+        public virtual void Begin(MicrogameSession session)
+        {
+            Session = session;
+            IsRunning = true;
+        }
+
+        public virtual void End()
+        {
+            IsRunning = false;
+        }
+
+        protected void Win()
+        {
+            if (IsRunning) Session.Finish(true);
+        }
+
+        protected void Lose()
+        {
+            if (IsRunning) Session.Finish(false);
+        }
+
+
+
     }
-
-    public virtual void End()
-    {
-        IsRunning = false;
-    }
-
-    protected void Win()
-    {
-        if(IsRunning) Session.Finish(true);
-    }
-
-    protected void Lose()
-    {
-        if(IsRunning) Session.Finish(false);
-    }
-
-
-
 }
