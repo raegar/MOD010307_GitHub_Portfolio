@@ -76,15 +76,16 @@
 
 **/Assets/AssetStoreTools*
 
-
 # --------------------------------------------
-# TextMeshPro import area (ignore all file types)
+# TextMeshPro generated files (re-import TMP Essentials on each new computer)
 # --------------------------------------------
 
-**/[Tt]extMesh Pro/**
-**/[Tt]extMesh Pro.meta
-**/[Tt]extMeshPro/**
-**/[Tt]extMeshPro.meta
+**/TextMesh Pro/
+**/TextMesh Pro.meta
+**/TextMeshPro/
+**/*.tmp
+**/*TextMeshPro*.asset
+**/*TextMeshPro*.prefab
 
 
 # --------------------------------------------
