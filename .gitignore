@@ -76,6 +76,14 @@
 
 **/Assets/AssetStoreTools*
 
+# TextMeshPro generated files
+**/TextMesh Pro/
+**/TextMesh Pro.meta
+**/TextMeshPro/
+**/*.tmp
+**/*TextMeshPro*.asset
+**/*TextMeshPro*.prefab
+
 
 # --------------------------------------------
 # Crash reports and debug output
