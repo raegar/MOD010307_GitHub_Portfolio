@@ -7,7 +7,7 @@ namespace MicrogameCourse.Framework
     {
         private enum Phase { Ready, Playing, Result }
 
-        [SerializeField] private MicrogameBehaviour game;
+        [SerializeField] private MicrogameBehaviour microgame;
         [SerializeField] private GameObject readyPanel;
         [SerializeField] private GameObject playArea;
         [SerializeField] private GameObject resultPanel;
@@ -29,7 +29,7 @@ namespace MicrogameCourse.Framework
 
         public void StartGame()
         {
-            if (currentPhase != Phase.Ready || game == null) return;
+            if (currentPhase != Phase.Ready || microgame == null) return;
 
             remainingSeconds = durationSeconds;
             readyPanel.SetActive(false);
@@ -37,7 +37,7 @@ namespace MicrogameCourse.Framework
             resultPanel.SetActive(false);
             currentPhase = Phase.Playing;
             ShowTime();
-            game.Begin(this);
+            microgame.Begin(this);
         }
 
         private void Update()
@@ -54,7 +54,7 @@ namespace MicrogameCourse.Framework
             if (currentPhase != Phase.Playing) return;
 
             currentPhase = Phase.Result;
-            game.End();
+            microgame.End();
             playArea.SetActive(false);
             resultPanel.SetActive(true);
             resultText.text = won ? "You win!" : "Time is up!";
